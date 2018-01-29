@@ -5,7 +5,7 @@ public class ConsultConfigArea {
     public String areaCode;
     
     public String areaName;
-    
+    //dsfgsdfg sdfgsdfgsdfg
     public Integer state;
     
     public String getAreaCode() {
