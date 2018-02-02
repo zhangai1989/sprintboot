@@ -3,10 +3,10 @@ package com.jz.springbootdemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 import java.util.Map;
@@ -15,8 +15,8 @@ import java.util.Map;
 //@RestController注解相当于@ResponseBody ＋ @Controller合在一起的作用。本来应该到success.jsp页面的，则其显示success.
 //@RestController
 @SpringBootApplication
+@ImportResource(value = {"classpath:providers.xml"}) // 使用 providers.xml 配置；
 public class SpringbootdemoApplication extends SpringBootServletInitializer {
-
 	@RequestMapping(value="/hello")
 	@ResponseBody
 	public String hello(){
