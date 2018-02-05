@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:apollo="http://www.ctrip.com/schema/apollo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+       http://www.ctrip.com/schema/apollo http://www.ctrip.com/schema/apollo.xsd">
+    <apollo:config order="2"/>
+    <!-- 这个是最复杂的配置形式，指示Apollo注入FX.apollo和FX.soa namespace的配置到Spring环境中，并且顺序在application前面 -->
+    <apollo:config namespaces="FX.apollo,FX.soa" order="1"/>
+</beans>  
